@@ -1,0 +1,20 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "co.hiasynth/hiasynth",
+  "title": "Hiasynth",
+  "description": "Size markets, profile places and plan reach across Europe from a 1:1 synthetic population.",
+  "version": "1.0.0",
+  "websiteUrl": "https://hiasynth.co/docs/mcp-server",
+  "repository": {
+    "url": "https://github.com/hi-synth/hiasynth-mcp-server",
+    "source": "github"
+  },
+  "icons": [
+    { "src": "https://hiasynth.co/hicone-app-light.png", "mimeType": "image/png", "sizes": ["512x512"], "theme": "light" },
+    { "src": "https://hiasynth.co/hicone-app-dark.png", "mimeType": "image/png", "sizes": ["512x512"], "theme": "dark" },
+    { "src": "https://hiasynth.co/hicone.svg", "mimeType": "image/svg+xml", "sizes": ["any"] }
+  ],
+  "remotes": [
+    { "type": "streamable-http", "url": "https://mcp.hiasynth.co" }
+  ]
+}

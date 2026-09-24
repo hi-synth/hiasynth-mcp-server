@@ -1,0 +1,11 @@
+{
+  "name": "hiasynth",
+  "version": "1.0.0",
+  "description": "Size markets, profile places and plan audience reach across Europe from a 1:1 synthetic population.",
+  "mcpServers": {
+    "hiasynth": {
+      "httpUrl": "https://mcp.hiasynth.co"
+    }
+  },
+  "contextFileName": "GEMINI.md"
+}
