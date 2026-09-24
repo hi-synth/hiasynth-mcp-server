@@ -2,7 +2,7 @@
 
 # Hiasynth MCP server
 
-**A 1:1 synthetic population of Europe — 522 million people, ~300 attributes each, down to municipality and 1 km² — as a remote MCP server.**
+**A 1:1 synthetic population of Europe — 522 million people, ~700 attributes each, down to municipality and 1 km² — as a remote MCP server.**
 
 Ask your AI assistant who lives somewhere, how many people match a segment, where they cluster, what they spend on and how to reach them. Every answer is computed from joint distributions over the whole population, with lift against a matched baseline, not recalled from national averages.
 
