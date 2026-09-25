@@ -2,7 +2,7 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "co.hiasynth/humanity",
   "title": "Hiasynth Humanity — European demographics & market data",
-  "description": "Query humanity: demographics, market sizing and audience data for all of Europe, down to 1 km².",
+  "description": "The population layer for AI: demographics, spending and market data for every place in Europe.",
   "version": "1.0.0",
   "websiteUrl": "https://hiasynth.co/docs/mcp-server",
   "repository": {

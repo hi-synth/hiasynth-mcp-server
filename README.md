@@ -4,9 +4,9 @@
 
 ### Query humanity.
 
-**Demographic and market data for every place in Europe, as a remote MCP server.** Size a market, understand an audience, or see who lives anywhere, from a whole country down to a single neighbourhood. Ask your AI assistant in plain language.
+**The population layer for AI.** Demographic, spending and market data for every place in Europe, as one remote MCP server, for your AI assistant or inside your own product.
 
-Every answer is computed from Hiasynth Humanity, a 1:1 model of Europe's population: 522 million people with ~700 attributes each, covering demographics, household, income and wealth, values, media habits, what they spend on, eat and emit, and the character of the place they live. So you can ask about the intersection (age × income × values × spending, in any place down to 1 km²), with lift against the local population. No real person is in it, so it's private by design.
+Nobody could say what a Lyon neighbourhood spends on restaurants, or how many renting families in Bavaria earn above the median. Statistics come as national averages, surveys as small samples, and nothing ties who people are to where they live and what they spend. Hiasynth Humanity models it: all 522 million Europeans, each in a household, each household in its neighbourhood, with a line-by-line budget. That's ~700 attributes per person, queryable in any combination, at any resolution down to 1 km². No real person is in it, so it's private by design.
 
 [![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=hiasynth&config=eyJ1cmwiOiJodHRwczovL21jcC5oaWFzeW50aC5jbyJ9)
 [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=hiasynth&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.hiasynth.co%22%7D)
@@ -42,9 +42,39 @@ Headless clients send an API key from [hiasynth.co/app/mcp](https://hiasynth.co/
 }
 ```
 
+## Build it into your product
+
+The same server is an API for your features and agents: size a market inside a CRM and show where to dig next, tie a marketing tool's personas to the actual population, or show the wallet size of any neighbourhood.
+
+- **Auth:** OAuth 2.1 for user-facing apps, or a server-side API key from [hiasynth.co/app/mcp](https://hiasynth.co/app/mcp) (`Authorization: Bearer …`).
+- **Responses:** structured JSON with the numbers already computed: counts, shares, lift against the local baseline, top places, and a confidence tier. Aggregates only, never individual records.
+- **Fine control:** `query_population` takes a structured spec (group-by, filters, count/share/avg) for pipelines that need exact shapes.
+- **Any MCP client library** works: the official SDKs, the Claude and OpenAI APIs' MCP connectors, LangChain, or plain JSON-RPC over HTTPS.
+
+What `analyze_market` returns for *renting families with above-median income in Bavaria* (trimmed):
+
+```json
+{
+  "headline": "418,921 households (6.81% of Bayern). Biggest markets: München, Nürnberg.",
+  "segment_size": { "count": 418921, "share_pct": 6.81, "population": 6153349 },
+  "core_markets": [
+    { "name": "München, Landeshauptstadt", "count": 43674, "local_share_pct": 6.51, "lift": 0.96 },
+    { "name": "Würzburg", "count": 5272, "local_share_pct": 8.41, "lift": 1.23 }
+  ],
+  "hotspots": [
+    { "name": "Sonthofen, St", "count": 1111, "local_share_pct": 10.56, "lift": 1.5 }
+  ],
+  "confidence_tier": "medium",
+  "computed": "3 attribute filter(s) over 6,153,349 households at municipality resolution; counted, not estimated"
+}
+```
+
+Full reference: [Build with Hiasynth](https://hiasynth.co/docs/build).
+
 ## Try asking
 
-- *How many households in Bavaria have an electric car and children, and which towns over-index?*
+- *How many renting families with above-median income live in Bavaria, and where do they cluster?*
+- *What do households in La Croix-Rousse, Lyon, spend on restaurants and cafés?*
 - *Who lives in Södermalm, Stockholm — and how is it different from the rest of Sweden?*
 - *Which media channels reach women aged 25–40 in the top income quartile in France?*
 - *Compare Munich, Hamburg and Vienna for affluent 30–45 year olds.*
