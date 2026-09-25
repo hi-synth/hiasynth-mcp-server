@@ -1,7 +1,7 @@
 {
   "name": "hiasynth",
   "version": "1.0.0",
-  "description": "The population layer for AI: demographics, spending and market data for every place in Europe.",
+  "description": "Europe's population layer: demographics, spending and market data for every place, down to 1 km².",
   "mcpServers": {
     "hiasynth": {
       "httpUrl": "https://mcp.hiasynth.co"

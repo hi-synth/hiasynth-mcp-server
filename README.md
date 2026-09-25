@@ -4,7 +4,7 @@
 
 ### Query humanity.
 
-**The population layer for AI.** Demographic, spending and market data for every place in Europe, as one remote MCP server, for your AI assistant or inside your own product.
+**Europe's population layer.** Demographic, spending and market data for every place in Europe, as one remote MCP server, for your AI assistant or inside your own product.
 
 Nobody could say what a Lyon neighbourhood spends on restaurants, or how many renting families in Bavaria earn above the median. Statistics come as national averages, surveys as small samples, and nothing ties who people are to where they live and what they spend. Hiasynth Humanity models it: all 522 million Europeans, each in a household, each household in its neighbourhood, with a line-by-line budget. That's ~700 attributes per person, queryable in any combination, at any resolution down to 1 km². No real person is in it, so it's private by design.
 
