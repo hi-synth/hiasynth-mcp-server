@@ -1,10 +1,12 @@
-<p align="center"><img src="https://hiasynth.co/hicone-app-light.png" width="96" alt="Hiasynth"></p>
+<p align="center"><img src="https://hiasynth.co/hicone-app-light.png" width="96" alt="Hiasynth Humanity"></p>
 
-# Hiasynth MCP server
+# Hiasynth Humanity
 
-**A 1:1 synthetic population of Europe — 522 million people, ~700 attributes each, down to municipality and 1 km² — as a remote MCP server.**
+### Query humanity.
 
-Ask your AI assistant who lives somewhere, how many people match a segment, where they cluster, what they spend on and how to reach them. Every answer is computed from joint distributions over the whole population, with lift against a matched baseline, not recalled from national averages.
+**Demographic and market data for every place in Europe, as a remote MCP server.** Size a market, understand an audience, or see who lives anywhere, from a whole country down to a single neighbourhood. Ask your AI assistant in plain language.
+
+Every answer is computed from Hiasynth Humanity, a 1:1 model of Europe's population: 522 million people with ~700 attributes each, covering demographics, household, income and wealth, values, media habits, what they spend on, eat and emit, and the character of the place they live. So you can ask about the intersection (age × income × values × spending, in any place down to 1 km²), with lift against the local population. No real person is in it, so it's private by design.
 
 [![Add to Cursor](https://cursor.com/deeplink/mcp-install-dark.svg)](https://cursor.com/en/install-mcp?name=hiasynth&config=eyJ1cmwiOiJodHRwczovL21jcC5oaWFzeW50aC5jbyJ9)
 [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_Server-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://insiders.vscode.dev/redirect/mcp/install?name=hiasynth&config=%7B%22type%22%3A%22http%22%2C%22url%22%3A%22https%3A%2F%2Fmcp.hiasynth.co%22%7D)

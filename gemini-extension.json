@@ -1,7 +1,7 @@
 {
   "name": "hiasynth",
   "version": "1.0.0",
-  "description": "Size markets, profile places and plan audience reach across Europe from a 1:1 synthetic population.",
+  "description": "Query humanity: demographics, market sizing and audience data for all of Europe, down to 1 km².",
   "mcpServers": {
     "hiasynth": {
       "httpUrl": "https://mcp.hiasynth.co"
